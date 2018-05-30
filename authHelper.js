@@ -1,11 +1,9 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license at the bottom of this file.
 var credentials = {
   client: {
-//     id: '6c8225ab-e1cb-470c-b874-2b4bb3e971e0', //https://apps.dev.microsoft.com/?referrer=https:%2f%2fgithub.com%2fjasonjoh%2fnode-calendar-sync#/application/6c8225ab-e1cb-470c-b874-2b4bb3e971e0
-//     secret: 'gmysGQG7451!:vlcDBJQ7||',
-       id: '372e2159-c757-44b0-897b-55c7f90582f7', //https://apps.dev.microsoft.com/?referrer=https:%2f%2fgithub.com%2fjasonjoh%2fnode-calendar-sync#/application/6c8225ab-e1cb-470c-b874-2b4bb3e971e0
-    secret: 'pkiAXGMP0?zxjpTK5347-:{',
-  },
+    id: '6c8225ab-e1cb-470c-b874-2b4bb3e971e0', //https://apps.dev.microsoft.com/?referrer=https:%2f%2fgithub.com%2fjasonjoh%2fnode-calendar-sync#/application/6c8225ab-e1cb-470c-b874-2b4bb3e971e0
+    secret: 'gmysGQG7451!:vlcDBJQ7||',
+        },
   auth: {
     tokenHost: 'https://login.microsoftonline.com',
     authorizePath: 'common/oauth2/v2.0/authorize',
