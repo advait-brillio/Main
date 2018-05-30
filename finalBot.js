@@ -1,6 +1,6 @@
-const restify = require('restify');
+var restify = require('restify');
 
-const builder = require('botbuilder');
+var builder = require('botbuilder');
 
 var authHelper = require('./authHelper');
 
