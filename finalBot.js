@@ -4,7 +4,7 @@ const builder = require('botbuilder');
 
 var authHelper = require('./authHelper');
 
-var server1 = require('./server'); //LOGIN SERVER
+
 
 var router = require('./router');
 
@@ -50,7 +50,7 @@ handle['/code'] = code;
 
 handle['/mail;'] = mail;
 
-server1.start(router.route, handle);
+start(router.route, handle);
 //GLOBALLY DECLARING ARRAYS WHICH CAN ALSO BE ACCESSED THROUGH BOTS
 
 var cookies = []
@@ -58,7 +58,14 @@ var cookies = []
 var emails = []
 
 
-
+function start(route, handle) {
+  function onRequest(request, response) {
+    var pathName = url.parse(request.url).pathname;
+    console.log('Request for ' + pathName + ' received.');
+    route(handle, pathName, response, request);
+  }
+  
+  }
 
 //======================================================================================================================
 //---------------------------------------BOT DIALOGUES--------------------------------------------------------------
