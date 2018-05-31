@@ -4,7 +4,7 @@ var builder = require('botbuilder');
 
 var authHelper = require('./authHelper');
 
-var server1 = require('./server'); //LOGIN SERVER
+var server1 = require('./server0'); 
 
 var router = require('./router');
 
