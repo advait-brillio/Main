@@ -13,7 +13,7 @@ var url = require('url');
 //--------------RESTIFY SERVER-----------------------------------------------------------------------------------------------------
 
 var server = restify.createServer();
-server.listen(8081, function() {
+server.listen(8080, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
 
