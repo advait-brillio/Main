@@ -314,7 +314,7 @@ function home(response, request) {
     console.log('Request handler \'home\' was called.');
 //     response.writeHead(200, { 'Content-Type': 'text/html' });
 //     response.end();
-authorize(response, request);
+authorize;
 }
 
 //THIRD =====
