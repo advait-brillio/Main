@@ -16,13 +16,11 @@ var url = require('url');
 
 var server = restify.createServer();
 
-server.listen(process.env.port || process.env.PORT || 8081, function () {
-
-    console.log('%s listening to %s', server.name, server.url);
-
+server.listen(8081, function() {
+  console.log('%s listening at %s', server.name, server.url);
 });
 
-console.log('started...')
+
 
 var connector = new builder.ChatConnector({
 
@@ -34,8 +32,8 @@ var connector = new builder.ChatConnector({
 
 var bot = new builder.UniversalBot(connector);
 
-server.post('/', connector.listen());
-
+server.post('/api/messages', connector.listen());
+console.log('started...')
 //-------------------------------------------------------------------------------------------------------------------
 
 var handle = {};
