@@ -4,8 +4,8 @@ var restify = require('restify');
 var builder = require('botbuilder');
 
 var authHelper = require('./authHelper');
-var server1 = require('./server');
-var router = require('./router');
+// var server1 = require('./server');
+// var router = require('./router');
 
 var outlook = require('node-outlook');
 
@@ -13,7 +13,7 @@ var url = require('url');
 //--------------RESTIFY SERVER-----------------------------------------------------------------------------------------------------
 
 var server = restify.createServer();
-server.listen(8081, function() {
+server.listen(3333, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
 
@@ -33,24 +33,24 @@ server.post('/api/messages', connector.listen());
 console.log('started...')
 //-------------------------------------------------------------------------------------------------------------------
 
-var handle = {};
+// var handle = {};
 
 
-handle['/'] = home;
+// handle['/'] = home;
 
-handle['/authorize'] = authorize;
+// handle['/authorize'] = authorize;
 
-handle['/code'] = code;
+// handle['/code'] = code;
 
-handle['/mail;'] = mail;
+// handle['/mail;'] = mail;
 
-server1.start(router.route, handle);
+// server1.start(router.route, handle);
 
-//GLOBALLY DECLARING ARRAYS WHICH CAN ALSO BE ACCESSED THROUGH BOTS
+// //GLOBALLY DECLARING ARRAYS WHICH CAN ALSO BE ACCESSED THROUGH BOTS
 
-var cookies = []
+// var cookies = []
 
-var emails = []
+// var emails = []
 
 //======================================================================================================================
 //---------------------------------------BOT DIALOGUES--------------------------------------------------------------
