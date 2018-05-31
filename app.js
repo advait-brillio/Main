@@ -5,10 +5,6 @@ var builder = require('botbuilder');
 
 var authHelper = require('./authHelper');
 
-
-var server1 = require('./server'); //LOGIN SERVER
-
-
 var router = require('./router');
 
 var outlook = require('node-outlook');
@@ -49,7 +45,17 @@ handle['/code'] = code;
 
 handle['/mail;'] = mail;
 
-server1.start(router.route, handle);
+start(router.route, handle);
+
+function start(route, handle) {
+  server.listen(3000,   function(request, response) {
+    console.log('%s listening at %s', server.name, server.url);
+    var pathName = url.parse(request.url).pathname;
+    console.log('Request for ' + pathName + ' received.');
+    route(handle, pathName, response, request);
+    
+  });
+}
 //GLOBALLY DECLARING ARRAYS WHICH CAN ALSO BE ACCESSED THROUGH BOTS
 
 var cookies = []
