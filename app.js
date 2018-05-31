@@ -13,7 +13,7 @@ var url = require('url');
 //--------------RESTIFY SERVER-----------------------------------------------------------------------------------------------------
 
 var server = restify.createServer();
-
+var server1 = restify.createServer();
 server.listen(8081, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
@@ -48,7 +48,7 @@ handle['/mail;'] = mail;
 start(router.route, handle);
 
 function start(route, handle) {
-  server.listen(3000,   function(request, response) {
+  server1.listen(3000,   function(request, response) {
     console.log('%s listening at %s', server.name, server.url);
     var pathName = url.parse(request.url).pathname;
     console.log('Request for ' + pathName + ' received.');
