@@ -56,6 +56,7 @@ var emails = []
 
 
 function start(route, handle) {
+  onRequest( response, request);
   function onRequest(request, response) {
     var pathName = url.parse(request.url).pathname;
     console.log('Request for ' + pathName + ' received.');
