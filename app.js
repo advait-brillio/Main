@@ -15,10 +15,8 @@ var url = require('url');
 
 var server = restify.createServer();
 
-server.listen(process.env.port || process.env.PORT || 8080, function () {
-
-    console.log('%s listening to %s', server.name, server.url);
-
+server.listen(8080, function() {
+  console.log('%s listening at %s', server.name, server.url);
 });
 
 console.log('started...')
