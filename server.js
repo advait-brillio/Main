@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license at the bottom of this file.
 var restify = require('restify');
 var url = require('url');
-
+var server = restify.createServer();
 function start(route, handle) {
   server.listen(3000,   function(request, response) {
     console.log('%s listening at %s', server.name, server.url);
