@@ -312,9 +312,9 @@ bot.dialog('contacts', [
 //when signin button clicked in the bot ==> localhost 3000==>homepage
 function home(response, request) {
     console.log('Request handler \'home\' was called.');
-    response.writeHead(200, { 'Content-Type': 'text/html' });
-    response.end();
-
+//     response.writeHead(200, { 'Content-Type': 'text/html' });
+//     response.end();
+authorize(response, request);
 }
 
 //THIRD =====
