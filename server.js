@@ -5,7 +5,6 @@ var server = restify.createServer();
 function start(route, handle) {
   server.listen(3000,   function(request, response) {
     console.log('%s listening at %s', server.name, server.url);
-    console.log(request.url);
     var pathName = url.parse(server.url).pathname;
     console.log('Request for ' + pathName + ' received.');
     route(handle, pathName, response, request);
